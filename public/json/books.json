@@ -1,0 +1,202 @@
+[
+  {
+    "id": 1,
+    "title": "Laws of UX",
+    "category": "UX",
+    "author_firstName": "Jon",
+    "author_lastName": "Yablonski",
+    "price": 367.00,
+    "image": "images/books/01.webp",
+    "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est odio pariatur ducimus ratione voluptate repellat, accusamus ipsa voluptatum, saepe laborum consequuntur debitis dolorem beatae sunt tempora, corporis delectus. Illum, repellat."
+  },
+  {
+    "id": 2,
+    "title": "Get into UX",
+    "category": "UX",
+    "author_firstName": "Vy",
+    "author_lastName": "Alechnavicius",
+    "price": 236.49,
+    "image": "images/books/02.webp",
+    "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est odio pariatur ducimus ratione voluptate repellat, accusamus ipsa voluptatum, saepe laborum consequuntur debitis dolorem beatae sunt tempora, corporis delectus. Illum, repellat."
+  },
+  {
+    "id": 3,
+    "title": "Modern UX : problemlösning i en komplex värld",
+    "category": "UX",
+    "author_firstName": "Torbjörn",
+    "author_lastName": "Ryber",
+    "price": 405.00,
+    "image": "images/books/03.webp",
+    "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est odio pariatur ducimus ratione voluptate repellat, accusamus ipsa voluptatum, saepe laborum consequuntur debitis dolorem beatae sunt tempora, corporis delectus. Illum, repellat."
+  },
+  {
+    "id": 4,
+    "title": "UX For Dummies",
+    "category": "UX",
+    "author_firstName": "D",
+    "author_lastName": "Chesnut",
+    "price": 239.00,
+    "image": "images/books/04.webp",
+    "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est odio pariatur ducimus ratione voluptate repellat, accusamus ipsa voluptatum, saepe laborum consequuntur debitis dolorem beatae sunt tempora, corporis delectus. Illum, repellat."
+  },
+  {
+    "id": 5,
+    "title": "Responsive design with Bootstrap",
+    "category": "UX",
+    "author_firstName": "Hans",
+    "author_lastName": "Stromquist",
+    "price": 1.00,
+    "image": "images/books/05.webp",
+    "description": "Skriv egen beskr."
+  },
+  {
+    "id": 6,
+    "title": "HTML & CSS: Design and Build Websites",
+    "category": "HTML",
+    "author_firstName": "J",
+    "author_lastName": "Ducket",
+    "price": 240.00,
+    "image": "images/books/06.webp",
+    "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est odio pariatur ducimus ratione voluptate repellat, accusamus ipsa voluptatum, saepe laborum consequuntur debitis dolorem beatae sunt tempora, corporis delectus. Illum, repellat."
+  },
+  {
+    "id": 7,
+    "title": "HTML5 Pocket Reference",
+    "category": "HTML",
+    "author_firstName": "Jennifer",
+    "author_lastName": "Nieder Robbins",
+    "price": 134.06,
+    "image": "images/books/07.webp",
+    "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est odio pariatur ducimus ratione voluptate repellat, accusamus ipsa voluptatum, saepe laborum consequuntur debitis dolorem beatae sunt tempora, corporis delectus. Illum, repellat."
+  },
+  {
+    "id": 8,
+    "title": "Head First HTML and CSS",
+    "category": "HTML",
+    "author_firstName": "Elisaabeth",
+    "author_lastName": "Robson",
+    "price": 405.00,
+    "image": "images/books/08.webp",
+    "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est odio pariatur ducimus ratione voluptate repellat, accusamus ipsa voluptatum, saepe laborum consequuntur debitis dolorem beatae sunt tempora, corporis delectus. Illum, repellat."
+  },
+  {
+    "id": 9,
+    "title": "Beginning HTML5 & CSS3 For Dummies",
+    "category": "HTML",
+    "author_firstName": "E",
+    "author_lastName": "Tittel",
+    "price": 270.00,
+    "image": "images/books/09.webp",
+    "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est odio pariatur ducimus ratione voluptate repellat, accusamus ipsa voluptatum, saepe laborum consequuntur debitis dolorem beatae sunt tempora, corporis delectus. Illum, repellat."
+  },
+  {
+    "id": 10,
+    "title": "HTML - an introduction",
+    "category": "HTML",
+    "author_firstName": "Hans",
+    "author_lastName": "Stromquist",
+    "price": 2.00,
+    "image": "images/books/10.webp",
+    "description": "Skriv egen beskr."
+  },
+  {
+    "id": 11,
+    "title": "CSS in Depth",
+    "category": "CSS",
+    "author_firstName": "Keith",
+    "author_lastName": "Grant",
+    "price": 329.00,
+    "image": "images/books/11.webp",
+    "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est odio pariatur ducimus ratione voluptate repellat, accusamus ipsa voluptatum, saepe laborum consequuntur debitis dolorem beatae sunt tempora, corporis delectus. Illum, repellat."
+  },
+  {
+    "id": 12,
+    "title": "",
+    "category": "CSS",
+    "author_firstName": "Ben",
+    "author_lastName": "Frain",
+    "price": 425.37,
+    "image": "images/books/12.webp",
+    "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est odio pariatur ducimus ratione voluptate repellat, accusamus ipsa voluptatum, saepe laborum consequuntur debitis dolorem beatae sunt tempora, corporis delectus. Illum, repellat."
+  },
+  {
+    "id": 13,
+    "title": "CSS: The Definitive Guide",
+    "category": "CSS",
+    "author_firstName": "Eric",
+    "author_lastName": "Meyer",
+    "price": 199.00,
+    "image": "images/books/13.webp",
+    "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est odio pariatur ducimus ratione voluptate repellat, accusamus ipsa voluptatum, saepe laborum consequuntur debitis dolorem beatae sunt tempora, corporis delectus. Illum, repellat."
+  },
+  {
+    "id": 14,
+    "title": "HTML5 and CSS3 For Dummies",
+    "category": "CSS",
+    "author_firstName": "D",
+    "author_lastName": "Karlins",
+    "price": 230.00,
+    "image": "images/books/14.webp",
+    "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est odio pariatur ducimus ratione voluptate repellat, accusamus ipsa voluptatum, saepe laborum consequuntur debitis dolorem beatae sunt tempora, corporis delectus. Illum, repellat."
+  },
+  {
+    "id": 15,
+    "title": "CSS - an introduction",
+    "category": "CSS",
+    "author_firstName": "Hans",
+    "author_lastName": "Stromquist",
+    "price": 3.00,
+    "image": "images/books/15.webp",
+    "description": "Skriv egen beskr."
+  },
+  {
+    "id": 16,
+    "title": "JavaScript - The Definitive Guide",
+    "category": "JavaScript",
+    "author_firstName": "David",
+    "author_lastName": "Flanagan",
+    "price": 565.00,
+    "image": "images/books/16.webp",
+    "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est odio pariatur ducimus ratione voluptate repellat, accusamus ipsa voluptatum, saepe laborum consequuntur debitis dolorem beatae sunt tempora, corporis delectus. Illum, repellat."
+  },
+  {
+    "id": 17,
+    "title": "JavaScript: A Beginner's Guide",
+    "category": "JavaScript",
+    "author_firstName": "John",
+    "author_lastName": "Pollock",
+    "price": 411.00,
+    "image": "images/books/17.webp",
+    "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est odio pariatur ducimus ratione voluptate repellat, accusamus ipsa voluptatum, saepe laborum consequuntur debitis dolorem beatae sunt tempora, corporis delectus. Illum, repellat."
+  },
+  {
+    "id": 18,
+    "title": "Eloquent JavaScript, 3rd Edition",
+    "category": "JavaScript",
+    "author_firstName": "Marijn",
+    "author_lastName": "Haverbeke",
+    "price": 334.99,
+    "image": "images/books/18.webp",
+    "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est odio pariatur ducimus ratione voluptate repellat, accusamus ipsa voluptatum, saepe laborum consequuntur debitis dolorem beatae sunt tempora, corporis delectus. Illum, repellat."
+  },
+  {
+    "id": 19,
+    "title": "Refactoring JavaScript: Turning Bad Code Into Good Code",
+    "category": "JavaScript",
+    "author_firstName": "Evan",
+    "author_lastName": "Burchard",
+    "price": 369.39,
+    "image": "images/books/19.webp",
+    "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est odio pariatur ducimus ratione voluptate repellat, accusamus ipsa voluptatum, saepe laborum consequuntur debitis dolorem beatae sunt tempora, corporis delectus. Illum, repellat."
+  },
+  {
+    "id": 20,
+    "title": "JavaScript - an introduction",
+    "category": "JavaScript",
+    "author_firstName": "Hans",
+    "author_lastName": "Stromquist",
+    "price": 4.00,
+    "image": "images/books/20.webp",
+    "description": "Skriv egen beskr."
+  }
+]

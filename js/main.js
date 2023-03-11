@@ -89,15 +89,22 @@ function displayBooks() {
   let htmlArray = filteredBooks.map(({
     id, title, category, author_firstName, author_lastName, price, image, description
   }) => `
-    <div class="book">
-      <h3>${title}</h3>
-      <h5>${author_firstName} ${author_lastName}</h5>
-      <p><span>id</span>${id}</p>
-      <p><span>category</span>${category}</p>
-      <p><span>price</span>${price}</p>
-      <p><span>image</span>${image}</p>
-      <p><span>description</span>${description}</p>
-    </div>
+<div class="book">
+  <div class="book-info">
+    <h3>${title}</h3>
+    <h5><I>By ${author_firstName} ${author_lastName}</I></h5>
+    <p></p>
+    <p><span>category</span>${category}
+    <span>price</span>${price} SEK</p>
+  </div>
+  <div class="book-image">
+    <img src="${image}" alt="Book image" width="170" height="250">
+  </div>
+  <div class="book-actions">
+    <a href="#" class="btn btn-info">Info</a>
+    <a href="#" class="btn btn-primary">Add to Cart</a>
+  </div>
+</div>
   `);
   document.querySelector('.bookList').innerHTML = htmlArray.join('');
   document.querySelector('.cartData').innerHTML = htmlArray.join('');

@@ -31,22 +31,26 @@ header {
 
 .cartButton {
   background-color: white;
-
 }
-
 
 .cartData {
   background-color: rgb(194, 32, 32);
-
 }
 
 .book {
+  display: grid;
+  grid-template-columns: 1fr 170px;
+  grid-template-rows: 1fr;
   background-color: white;
   padding: 20px;
   margin: 20px;
   border-radius: 10px;
-  /* width: 460px; */
 }
+
+.book-image img {
+  border: 1px solid black;
+}
+
 
 .book p span {
   display: inline-block;

@@ -13,6 +13,7 @@ let myShoppingCartModal;
 async function start() {
   books = await getJSON('/json/books.json');
   myShoppingCartModal = new bootstrap.Modal(document.getElementById('myCart'));
+
   getCategories();
   addFilters();
   addSortingOptions();
@@ -78,6 +79,12 @@ function addFilters() {
   );
 }
 
+function testFunc() {
+
+  console.log("it worked");
+
+}
+
 function displayBooks() {
   // filter according to category and call displaBooks
   let filteredBooks = books.filter(
@@ -96,18 +103,23 @@ function displayBooks() {
     <p></p>
     <p><span>category</span>${category}
     <span>price</span>${price} SEK</p>
+    <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#bookInfo">Info</button>
+    <script>
+    const button[${id}] = document.querySelector('.btn-info');
+    button[${id}].addEventListener('click', testFunc(${id}));
+    </script>
+
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myCart">Add to Cart</button>
   </div>
   <div class="book-image">
     <img src="${image}" alt="Book image" width="170" height="250">
   </div>
-  <div class="book-actions">
-    <a href="#" class="btn btn-info">Info</a>
-    <a href="#" class="btn btn-primary">Add to Cart</a>
-  </div>
 </div>
   `);
+
   document.querySelector('.bookList').innerHTML = htmlArray.join('');
-  document.querySelector('.cartData').innerHTML = htmlArray.join('');
+  //document.querySelector('.cartData').innerHTML = htmlArray.join('');
 }
+
 
 start();

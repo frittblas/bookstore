@@ -8,17 +8,25 @@ let books,
   chosenSortOption,
   categories = [];
 
-let myShoppingCartModal;
+let booksInCart = [];
+
+let justOpenCart = true; // is the cart opened from a book view or navbar
+let mousePos = { x: undefined, y: undefined };
 
 async function start() {
   books = await getJSON('/json/books.json');
-  myShoppingCartModal = new bootstrap.Modal(document.getElementById('myCart'));
+
+  // for some reason I could'nt
+  window.addEventListener('mousemove', (event) => {
+    mousePos = { x: event.clientX, y: event.clientY };
+  });
 
   getCategories();
   addFilters();
   addSortingOptions();
   sortByLastName(books);
   displayBooks();
+
 }
 
 function sortByLastName(books) {
@@ -79,9 +87,69 @@ function addFilters() {
   );
 }
 
+function addBookToCart(title) {
+
+  if (!justOpenCart) {
+
+    let b;
+
+    // find the correct book based on the title
+    for (b of books) {
+      if (b.title == title)
+        break;
+    }
+
+
+    booksInCart.push(b);
+
+  }
+
+  // calculate total price
+  let totalPrice = 0;
+  for (let c of booksInCart) {
+    totalPrice += c.price;
+  }
+
+  // create a new array with no duplicates and a count variable for each object
+  const outputArray = Object.values(booksInCart.reduce((acc, obj) => {
+    const key = JSON.stringify(obj);
+    if (!acc[key]) {
+      acc[key] = { ...obj, count: 1 };
+    } else {
+      acc[key].count++;
+    }
+    return acc;
+  }, {}));
+
+  document.querySelector('.cartData').innerHTML = "";
+  let htmlDetails = "";
+
+  for (let c of outputArray) {
+
+    htmlDetails += /*html*/`
+  <hr>
+  <div>
+    <span><p>${c.title} (amount:  ${c.count}) = ${(c.price * c.count).toFixed(2)} SEK</p></span>
+  </div>
+
+  `;
+
+  }
+
+  document.querySelector('.cartData').innerHTML += htmlDetails;
+
+  document.querySelector('.cartData').innerHTML += /*html*/`
+    <hr>
+    <div>
+    <span><p>Total cost: ${totalPrice} SEK</p></span>
+  </div>
+  
+  `;
+
+}
+
 function showDetailedView(title) {
 
-  let details = {};
   let b;
 
   // find the correct book based on the title
@@ -99,7 +167,7 @@ function showDetailedView(title) {
     <p></p>
     <p><span>category: </span>${b.category}
     <span>price: </span>${b.price} SEK</p>
-    <button type="button" class="btn btn-secondary" data-bs-toggle="modal">Close</button>
+    <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#bookInfo">Close</button>
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myCart">Add to Cart</button>
   </div>
   <div class="book-image">
@@ -107,13 +175,12 @@ function showDetailedView(title) {
   </div>
 
 </div>
-    <div class="descr">
-    <p><span>Description: </span></p>${b.description}
-    </div>
+
+<div class="descr">
+<p><span>Description: </span></p>${b.description}
+</div>
 
   `;
-
-  //document.querySelector('.bookList').innerHTML = htmlDetails;
 
   document.querySelector('.infoData').innerHTML = htmlDetails;
 
@@ -139,7 +206,7 @@ function displayBooks() {
     <p><span>category</span>${category}
     <span>price</span>${price} SEK</p>
     <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#bookInfo">Info</button>
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myCart">Add to Cart</button>
+    <button type="button" id="crtbtn" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myCart">Add to Cart</button>
   </div>
   <div class="book-image">
     <img src="${image}" alt="Book image" width="170" height="250">
@@ -149,14 +216,21 @@ function displayBooks() {
   `);
 
   document.querySelector('.bookList').innerHTML = htmlArray.join('');
-  //document.querySelector('.infoData').innerHTML = htmlArray.join('');
-  //document.querySelector('.cartData').innerHTML = htmlArray.join('');
 
   // add event listener when info modal is shown
   document.querySelector('#bookInfo').addEventListener('show.bs.modal', event => {
     // console.log(event.relatedTarget.parentNode.firstElementChild.innerText);
     let title = event.relatedTarget.parentNode.firstElementChild.innerText; // find the title in the book-info div (h3)
     showDetailedView(title);
+  });
+
+  // add event listener when shopping cart modal is shown
+  document.querySelector('#myCart').addEventListener('show.bs.modal', event => {
+    // console.log(event.relatedTarget.parentNode.firstElementChild.innerText);
+    let title = event.relatedTarget.parentNode.firstElementChild.innerText; // find the title in the book-info div (h3)
+    //justOpenCart = lastClickY < 100 ? true : false;
+    justOpenCart = mousePos.y < 100 ? true : false;
+    addBookToCart(title);
   });
 
 }
